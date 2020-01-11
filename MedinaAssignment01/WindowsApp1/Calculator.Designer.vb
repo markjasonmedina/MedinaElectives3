@@ -65,7 +65,6 @@ Partial Class Calculator
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Button37 = New System.Windows.Forms.Button()
         Me.Button38 = New System.Windows.Forms.Button()
-        Me.Label10 = New System.Windows.Forms.Label()
         Me.Button40 = New System.Windows.Forms.Button()
         Me.Button39 = New System.Windows.Forms.Button()
         Me.Label13 = New System.Windows.Forms.Label()
@@ -76,6 +75,7 @@ Partial Class Calculator
         Me.Button22 = New System.Windows.Forms.Button()
         Me.Button25 = New System.Windows.Forms.Button()
         Me.Button10 = New System.Windows.Forms.Button()
+        Me.TextBox1 = New System.Windows.Forms.MaskedTextBox()
         Me.SuspendLayout()
         '
         'Button1
@@ -661,17 +661,6 @@ Partial Class Calculator
         Me.Button38.Text = "✕"
         Me.Button38.UseVisualStyleBackColor = False
         '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.ForeColor = System.Drawing.Color.Black
-        Me.Label10.Location = New System.Drawing.Point(289, 81)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(33, 37)
-        Me.Label10.TabIndex = 51
-        Me.Label10.Text = "0"
-        '
         'Button40
         '
         Me.Button40.BackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer))
@@ -809,16 +798,29 @@ Partial Class Calculator
         Me.Button10.TabIndex = 5
         Me.Button10.UseVisualStyleBackColor = False
         '
+        'TextBox1
+        '
+        Me.TextBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox1.Font = New System.Drawing.Font("Segoe UI", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(5, 84)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.PromptChar = Global.Microsoft.VisualBasic.ChrW(48)
+        Me.TextBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.TextBox1.Size = New System.Drawing.Size(312, 39)
+        Me.TextBox1.TabIndex = 55
+        Me.TextBox1.Text = "0"
+        '
         'Calculator
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(321, 479)
+        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Button40)
         Me.Controls.Add(Me.Button39)
         Me.Controls.Add(Me.Label13)
-        Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Button38)
         Me.Controls.Add(Me.Button37)
         Me.Controls.Add(Me.Label12)
@@ -925,8 +927,8 @@ Partial Class Calculator
     Friend WithEvents Label12 As Label
     Friend WithEvents Button37 As Button
     Friend WithEvents Button38 As Button
-    Friend WithEvents Label10 As Label
     Friend WithEvents Label13 As Label
     Friend WithEvents Button39 As Button
     Friend WithEvents Button40 As Button
+    Friend WithEvents TextBox1 As MaskedTextBox
 End Class
